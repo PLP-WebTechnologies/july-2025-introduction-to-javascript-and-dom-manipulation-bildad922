@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interactive Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Interactive Week 5</h1>
+            <p class="subtitle">Exploring how JavaScript fundamentals work through interactive examples</p>
+        </header>
+        
+        <div class="grid">
+            <!-- Part 1: JavaScript Basics -->
+            <div class="card">
+                <h2>Part 1: JavaScript Basics</h2>
+                <p>Variables, conditionals, and user input</p>
+                
+                <div class="input-group">
+                    <label for="userAge">Enter your age:</label>
+                    <input type="number" id="userAge" placeholder="Enter a number">
+                </div>
+                
+                <button onclick="checkAge()">Check Eligibility</button>
+                
+                <div class="output" id="ageOutput">
+                    Result will appear here
+                </div>
+                
+                <div class="input-group">
+                    <label for="numberInput">Enter a number:</label>
+                    <input type="number" id="numberInput" placeholder="Enter a number">
+                </div>
+                
+                <button onclick="checkNumber()">Check Number Type</button>
+                
+                <div class="output" id="numberOutput">
+                    Result will appear here
+                </div>
+            </div>
+            
+            <!-- Part 2: JavaScript Functions -->
+            <div class="card">
+                <h2>Part 2: JavaScript Functions</h2>
+                <p>Reusable blocks of logic</p>
+                
+                <div class="function-display">
+                    function calculateRectangleArea(width, height) {
+                      return width * height;
+                    }
+                </div>
+                
+                <div class="input-group">
+                    <label for="width">Width:</label>
+                    <input type="number" id="width" placeholder="Enter width">
+                </div>
+                
+                <div class="input-group">
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" placeholder="Enter height">
+                </div>
+                
+                <button onclick="calculateArea()">Calculate Area</button>
+                
+                <div class="output" id="areaOutput">
+                    Area will be calculated here
+                </div>
+                
+                <div class="function-display">
+                    function formatGreeting(name, age) {
+                      return `Hello, ${name}! You are ${age} years old.`;
+                    }
+                </div>
+                
+                <div class="input-group">
+                    <label for="userName">Your name:</label>
+                    <input type="text" id="userName" placeholder="Enter your name">
+                </div>
+                
+                <button onclick="showGreeting()">Show Greeting</button>
+                
+                <div class="output" id="greetingOutput">
+                    Greeting will appear here
+                </div>
+            </div>
+        </div>
+        
+        <!-- Part 3: JavaScript Loops -->
+        <div class="card">
+            <h2>Part 3: JavaScript Loops</h2>
+            <p>Repetition and iteration</p>
+            
+            <div class="input-group">
+                <label for="loopCount">How many items to generate?</label>
+                <input type="number" id="loopCount" value="10" min="1" max="50">
+            </div>
+            
+            <button onclick="runForLoop()">Run For Loop</button>
+            
+            <div class="loop-output" id="forLoopOutput">
+                <!-- Loop items will be generated here -->
+            </div>
+            
+            <div class="input-group">
+                <label for="whileLoopNumber">Countdown from:</label>
+                <input type="number" id="whileLoopNumber" value="5" min="1" max="20">
+            </div>
+            
+            <button onclick="runWhileLoop()">Run While Loop (Countdown)</button>
+            
+            <div class="output" id="whileLoopOutput">
+                Countdown will appear here
+            </div>
+        </div>
+        
+        <!-- Part 4: DOM Manipulation -->
+        <div class="card">
+            <h2>Part 4: DOM Manipulation</h2>
+            <p>Interacting with the Document Object Model</p>
+            
+            <div class="dom-interaction">
+                <button class="dom-button" onclick="changeText()">Change Text Below</button>
+                <button class="dom-button" onclick="changeColor()">Change Background Color</button>
+                <button class="dom-button" onclick="toggleVisibility()">Toggle Visibility</button>
+                <button class="dom-button" onclick="addItem()">Add List Item</button>
+                <button class="dom-button" onclick="resetDOM()">Reset</button>
+            </div>
+            
+            <div class="dom-output">
+                <p id="textToChange">This is the original text. Click the button to change me!</p>
+                
+                <div class="color-box" id="colorBox">
+                    Color Box
+                </div>
+                
+                <p id="toggleText">This text will toggle visibility</p>
+                
+                <ul id="itemList">
+                    <li>Initial item</li>
+                </ul>
+            </div>
+            
+            <div class="counter">
+                Counter: <span id="counterValue">0</span>
+            </div>
+            
+            <button onclick="incrementCounter()">Increment Counter</button>
+        </div>
+        
+        <footer>
+            <p>JavaScript Interactive Playground | Demonstrating JavaScript Fundamentals</p>
+        </footer>
+    </div>
+</body>
+</html>
